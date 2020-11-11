@@ -1,3 +1,4 @@
+import { getSession } from "next-auth/client";
 import prisma from "../../prisma";
 
 // POST /api/post

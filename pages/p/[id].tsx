@@ -7,7 +7,6 @@ import { PostProps } from "../../components/Post";
 import { useSession } from "next-auth/client";
 import prisma from "../prisma";
 
-
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.post.findOne({
     where: {
