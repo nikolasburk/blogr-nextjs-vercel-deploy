@@ -1,7 +1,7 @@
-// import prisma from "../../prisma";
-import { PrismaClient } from "@prisma/client";
+import prisma from "../../api/prisma";
+// import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 // PUT /api/publish/:id
 export default async function handle(req, res) {
   const postId = req.query.id;
