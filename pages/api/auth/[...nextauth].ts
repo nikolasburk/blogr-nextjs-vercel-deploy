@@ -2,9 +2,10 @@ import { NextApiHandler } from "next";
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
 import Adapters from "next-auth/adapters";
+// import prisma from "../../prisma";
+import { PrismaClient } from "@prisma/client";
 
-import prisma from "../../prisma";
-
+const prisma = new PrismaClient();
 const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, options);
 export default authHandler;
 console.log(`ENV VARS`)

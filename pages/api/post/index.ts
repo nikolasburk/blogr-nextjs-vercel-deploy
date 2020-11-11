@@ -1,6 +1,8 @@
 import { getSession } from "next-auth/client";
-import prisma from "../../prisma";
+// import prisma from "../../prisma";
+import { PrismaClient } from "@prisma/client";
 
+const prisma = new PrismaClient();
 // POST /api/post
 // Required fields in body: title
 // Optional fields in body: content

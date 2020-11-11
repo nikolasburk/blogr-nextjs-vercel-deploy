@@ -5,8 +5,10 @@ import Layout from "../../components/Layout";
 import Router from "next/router";
 import { PostProps } from "../../components/Post";
 import { useSession } from "next-auth/client";
-import prisma from "../prisma";
+// import prisma from "../prisma";
+import { PrismaClient } from "@prisma/client";
 
+const prisma = new PrismaClient();
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.post.findOne({
     where: {
